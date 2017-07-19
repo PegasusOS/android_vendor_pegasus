@@ -75,6 +75,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
+# Copy all Pegasus-specific init rc files
+$(foreach f,$(wildcard vendor/pegasus/prebuilts/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
+
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/etc/permissions/privapp-permissions-pegasus-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pegasus-product.xml \
