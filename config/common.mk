@@ -38,8 +38,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/pegasus/overlay/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/pegasus/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/pegasus/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/pegasus/overlay/common
 
 PEGASUSOS_BUILDTYPE ?= NIGHTLY
 PRODUCT_VERSION_MAJOR = 11
