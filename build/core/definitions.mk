@@ -1,2 +1,6 @@
-# Include QCOM macros
-include vendor/pegasus/build/core/qcom_utils.mk
+# Include board/platform macros
+include vendor/pegasus/build/core/utils.mk
+
+# Include vendor platform definitions
+include vendor/pegasus/build/core/vendor/*.mk
+
