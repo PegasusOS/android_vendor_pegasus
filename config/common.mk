@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/pegasus/prebuilts/bin/50-base.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-base.sh
 
+# System mount
+PRODUCT_COPY_FILES += \
+    vendor/pegasus/prebuilts/bin/system-mount.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/system-mount.sh
+
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
