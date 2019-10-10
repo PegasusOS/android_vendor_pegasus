@@ -75,6 +75,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/pegasus/prebuilts/etc/permissions/privapp-permissions-pegasus-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pegasus-product.xml
+
 PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/fonts/google-fonts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
