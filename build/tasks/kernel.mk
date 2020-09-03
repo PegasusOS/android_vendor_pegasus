@@ -90,13 +90,10 @@ KERNEL_DEFCONFIG_SRC := $(KERNEL_DEFCONFIG_DIR)/$(KERNEL_DEFCONFIG)
 
 ifneq ($(TARGET_KERNEL_ADDITIONAL_CONFIG),)
 KERNEL_ADDITIONAL_CONFIG := $(TARGET_KERNEL_ADDITIONAL_CONFIG)
-KERNEL_ADDITIONAL_CONFIG_DEPENDENCY :=
 KERNEL_ADDITIONAL_CONFIG_SRC := $(KERNEL_DEFCONFIG_DIR)/$(KERNEL_ADDITIONAL_CONFIG)
     ifeq ("$(wildcard $(KERNEL_ADDITIONAL_CONFIG_SRC))","")
         $(warning TARGET_KERNEL_ADDITIONAL_CONFIG '$(TARGET_KERNEL_ADDITIONAL_CONFIG)' doesn't exist)
         KERNEL_ADDITIONAL_CONFIG_SRC := /dev/null
-    else
-        KERNEL_ADDITIONAL_CONFIG_DEPENDENCY := $(KERNEL_ADDITIONAL_CONFIG_SRC)
     endif
 else
     KERNEL_ADDITIONAL_CONFIG_SRC := /dev/null
@@ -264,8 +261,10 @@ define build-image-kernel-modules-pegasusos
     cp $(4)/lib/modules/0.0/modules.alias $(2)/lib/modules
 endef
 
-$(KERNEL_ADDITIONAL_CONFIG_OUT): $(KERNEL_ADDITIONAL_CONFIG_DEPENDENCY)
+$(KERNEL_OUT):
 	mkdir -p $(KERNEL_OUT)
+
+$(KERNEL_ADDITIONAL_CONFIG_OUT): $(KERNEL_OUT)
 	$(hide) cmp -s $(KERNEL_ADDITIONAL_CONFIG_SRC) $@ || cp $(KERNEL_ADDITIONAL_CONFIG_SRC) $@;
 
 $(KERNEL_CONFIG): $(KERNEL_DEFCONFIG_SRC) $(KERNEL_ADDITIONAL_CONFIG_OUT)
@@ -311,15 +310,13 @@ kerneltags: $(KERNEL_CONFIG)
 
 .PHONY: kernelsavedefconfig alldefconfig
 
-kernelsavedefconfig:
-	mkdir -p $(KERNEL_OUT)
+kernelsavedefconfig: $(KERNEL_OUT)
 	$(call make-kernel-target,$(KERNEL_DEFCONFIG))
 	env KCONFIG_NOTIMESTAMP=true \
 		 $(call make-kernel-target,savedefconfig)
 	cp $(KERNEL_OUT)/defconfig $(KERNEL_DEFCONFIG_SRC)
 
-alldefconfig:
-	mkdir -p $(KERNEL_OUT)
+alldefconfig: $(KERNEL_OUT)
 	env KCONFIG_NOTIMESTAMP=true \
 		 $(call make-kernel-target,alldefconfig)
 
