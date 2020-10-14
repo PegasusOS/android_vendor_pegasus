@@ -1,12 +1,4 @@
 bootstrap_go_package {
-    name: "soong-pegasusos",
-    pkgPath: "pegasusos/soong/android",
-    srcs: [
-        "android/variable.go",
-    ],
-}
-
-bootstrap_go_package {
     name: "soong-pegasusos-generator",
     pkgPath: "pegasusos/soong/generator",
     deps: [
