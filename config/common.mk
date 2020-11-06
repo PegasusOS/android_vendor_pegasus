@@ -77,7 +77,8 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    vendor/pegasus/prebuilts/etc/permissions/privapp-permissions-pegasus-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pegasus-product.xml
+    vendor/pegasus/prebuilts/etc/permissions/privapp-permissions-pegasus-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pegasus-product.xml \
+    vendor/pegasus/prebuilts/etc/permissions/privapp-permissions-pegasus-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-pegasus-system_ext.xml
 
 PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/fonts/google-fonts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
@@ -106,6 +107,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
+    Flipendo \
     PegasusThemesStub \
     Phonograph \
     Seedvault \
