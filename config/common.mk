@@ -64,3 +64,7 @@ PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
+# Pixel APNs
+PRODUCT_COPY_FILES += \
+    vendor/pegasus/prebuilts/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
