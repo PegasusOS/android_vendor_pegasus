@@ -46,6 +46,7 @@ SOONG_CONFIG_pegasusosNvidiaVars += \
 SOONG_CONFIG_NAMESPACES += pegasusosQcomVars
 SOONG_CONFIG_pegasusosQcomVars += \
     should_wait_for_qsee \
+    legacy_hw_disk_encryption \
     supports_extended_compress_format \
     supports_hw_fde \
     supports_hw_fde_perf \
@@ -71,6 +72,7 @@ SOONG_CONFIG_pegasusosQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTI
 SOONG_CONFIG_pegasusosQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_pegasusosQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
 SOONG_CONFIG_pegasusosQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
+SOONG_CONFIG_pegasusosQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
