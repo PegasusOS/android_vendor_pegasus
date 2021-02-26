@@ -71,3 +71,8 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
+PRODUCT_COPY_FILES += \
+    vendor/pegasus/prebuilts/fonts/google-fonts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+
+PRODUCT_PACKAGES += \
+    GoogleFonts
