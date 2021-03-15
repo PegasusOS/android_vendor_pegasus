@@ -72,11 +72,6 @@ include vendor/lineage/config/aosp_audio.mk
 # Include Lineage audio files
 include vendor/lineage/config/lineage_audio.mk
 
-# TWRP
-ifeq ($(WITH_TWRP),true)
-include vendor/lineage/config/twrp.mk
-endif
-
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
@@ -294,4 +289,3 @@ endif
 endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/lineage/config/partner_gms.mk
