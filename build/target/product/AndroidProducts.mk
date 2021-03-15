@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018-2020 The LineageOS Project
+#           (C) 2021 The PegasusOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,21 +16,21 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_arm.mk \
-    $(LOCAL_DIR)/lineage_arm64.mk \
-    $(LOCAL_DIR)/lineage_x86.mk \
-    $(LOCAL_DIR)/lineage_x86_64.mk \
-    $(LOCAL_DIR)/lineage_arm_ab.mk \
-    $(LOCAL_DIR)/lineage_arm64_ab.mk \
-    $(LOCAL_DIR)/lineage_x86_ab.mk \
-    $(LOCAL_DIR)/lineage_x86_64_ab.mk
+    $(LOCAL_DIR)/pegasus_arm.mk \
+    $(LOCAL_DIR)/pegasus_arm64.mk \
+    $(LOCAL_DIR)/pegasus_x86.mk \
+    $(LOCAL_DIR)/pegasus_x86_64.mk \
+    $(LOCAL_DIR)/pegasus_arm_ab.mk \
+    $(LOCAL_DIR)/pegasus_arm64_ab.mk \
+    $(LOCAL_DIR)/pegasus_x86_ab.mk \
+    $(LOCAL_DIR)/pegasus_x86_64_ab.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_arm-userdebug \
-    lineage_arm64-userdebug \
-    lineage_x86-userdebug \
-    lineage_x86_64-userdebug \
-    lineage_arm_ab-userdebug \
-    lineage_arm64_ab-userdebug \
-    lineage_x86_ab-userdebug \
-    lineage_x86_64_ab-userdebug
+    pegasus_arm-userdebug \
+    pegasus_arm64-userdebug \
+    pegasus_x86-userdebug \
+    pegasus_x86_64-userdebug \
+    pegasus_arm_ab-userdebug \
+    pegasus_arm64_ab-userdebug \
+    pegasus_x86_ab-userdebug \
+    pegasus_x86_64_ab-userdebug

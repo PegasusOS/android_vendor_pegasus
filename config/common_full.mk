@@ -1,5 +1,5 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile.mk)
+# Inherit common Pegasus stuff
+$(call inherit-product, vendor/pegasus/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
@@ -12,7 +12,3 @@ PRODUCT_PACKAGES += \
     fonts_customization.xml \
     LineageLatoFont \
     LineageRubikFont
-
-# Recorder
-PRODUCT_PACKAGES += \
-    Recorder
