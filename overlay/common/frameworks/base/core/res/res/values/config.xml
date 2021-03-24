@@ -87,4 +87,7 @@
     <string name="config_headlineFontFamilyLight">google-sans</string>
     <string name="config_headlineFontFeatureSettings">ss03</string>
     <bool name="config_buttonTextAllCaps">false</bool>
+
+    <!-- Colon separated list of package names that should be granted Notification Listener access -->
+    <string name="config_defaultListenerAccessPackages" translatable="false">com.android.launcher3</string>
 </resources>
