@@ -76,3 +76,17 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     GoogleFonts
+
+PRODUCT_PACKAGES += \
+    Etar \
+    ExactCalculator \
+    PegasusThemesStub \
+    Phonograph \
+    Seedvault \
+    SetupWizard \
+    Stk \
+    talkback \
+    ThemePicker \
+    TrichromeChrome \
+    TrichromeWebView \
+    Updater
