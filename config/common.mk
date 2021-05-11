@@ -84,6 +84,7 @@ PRODUCT_PACKAGES += \
     Phonograph \
     Seedvault \
     SetupWizard \
+    Recorder \
     Stk \
     talkback \
     ThemePicker \
