@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
     PegasusThemesStub \
     Phonograph \
     Seedvault \
-    SetupWizard \
+    PegasusSetupWizard \
     Recorder \
     Stk \
     talkback \
