@@ -85,6 +85,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     GoogleFonts
 
+# microG
+PRODUCT_PACKAGES += \
+    GmsCore \
+    GsfProxy \
+    FakeStore \
+    DejaVuLocationService \
+    MozillaNlpBackend \
+    NominatimNlpBackend
+
+# Apps
+PRODUCT_PACKAGES += \
+    AuroraStorePrivilegedExtension \
+    F-Droid \
+    fdroid-repo \
+    F-DroidPrivilegedExtension \
+    Firewall \
+    Ripple
+
 PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
