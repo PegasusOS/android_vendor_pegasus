@@ -34,5 +34,15 @@
     <string-array name="config_pluginWhitelist" translatable="false">
         <item>com.android.systemui.plugin.globalactions.wallet</item>
     </string-array>
+
+    <!-- The default tiles to display in QuickSettings -->
+    <string name="quick_settings_tiles_default" translatable="false">
+        wifi,bt,sensorprivacy,dark,dnd,airplane,cell,battery,rotation,flashlight,location,hotspot,work,screenrecord,caffeine,heads_up,sync
+    </string>
+
+    <!-- The tiles to display in QuickSettings in retail mode -->
+    <string name="quick_settings_tiles_retail_mode" translatable="false">
+        wifi,bt,sensorprivacy,dark,dnd,airplane,cell,battery,rotation,flashlight,location,hotspot,work,screenrecord,caffeine,heads_up,sync
+    </string>
 </resources>
 
