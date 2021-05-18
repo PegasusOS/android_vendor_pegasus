@@ -34,5 +34,6 @@
         <item>com.android.messaging</item> <!-- AOSP messaging -->
         <item>com.google.android.setupwizard</item> <!-- Google SetupWizard -->
         <item>org.pegasusos.setupwizard</item> <!-- PegasusOS SetupWizard -->
+        <item>org.fdroid.fdroid</item>
     </string-array>
 </resources>
