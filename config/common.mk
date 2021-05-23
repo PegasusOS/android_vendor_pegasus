@@ -95,11 +95,10 @@ PRODUCT_PACKAGES += \
     MozillaNlpBackend \
     NominatimNlpBackend
 
-PRODUCT_COPY_FILES += \
-    vendor/pegasus/prebuilts/etc/org.fdroid.fdroid/additional_repos.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/org.fdroid.fdroid/additional_repos.xml
-
 # Apps
 PRODUCT_PACKAGES += \
+    additional_repos.xml \
+    AuroraStore \
     AuroraStorePrivilegedExtension \
     F-Droid \
     F-DroidPrivilegedExtension \
