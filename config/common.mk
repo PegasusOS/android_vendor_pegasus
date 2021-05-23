@@ -180,6 +180,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Popcorn.ogg \
     ro.config.ringtone=The_big_adventure.ogg
 
+# Bootanimation
+PRODUCT_COPY_FILES += \
+	vendor/pegasus/prebuilts/media/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+
 PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
