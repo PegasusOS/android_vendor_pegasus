@@ -80,11 +80,16 @@ PRODUCT_COPY_FILES += \
     vendor/pegasus/prebuilts/etc/permissions/privapp-permissions-pegasus-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pegasus-product.xml \
     vendor/pegasus/prebuilts/etc/permissions/privapp-permissions-pegasus-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-pegasus-system_ext.xml
 
-PRODUCT_COPY_FILES += \
-    vendor/pegasus/prebuilts/fonts/google-fonts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+# Include {Lato,Rubik} fonts
+$(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 
+# Fonts
 PRODUCT_PACKAGES += \
-    GoogleFonts
+    fonts_customization.xml \
+    GoogleFonts \
+    LineageLatoFont \
+    LineageRubikFont
 
 # microG
 PRODUCT_PACKAGES += \

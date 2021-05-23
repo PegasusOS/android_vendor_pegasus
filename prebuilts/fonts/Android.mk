@@ -29,3 +29,11 @@ LOCAL_MODULE_OWNER := google
 LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := $(GOOGLE_FONTS)
 include $(BUILD_PHONY_PACKAGE)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := fonts_customization.xml
+LOCAL_SRC_FILES := fonts_customization.xml
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_PRODUCT_MODULE := true
+include $(BUILD_PREBUILT)
