@@ -5,7 +5,45 @@
         <item>com.google.android.gms</item>
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
+        <!-- Standalone UnifiedNlp (for gapps) -->
+        <item>org.microg.nlp</item>
     </string-array>
+
+    <!-- A list of potential packages, in priority order, that may contain an
+         ephemeral resolver. Each package will be be queried for a component
+         that has been granted the PACKAGE_EPHEMERAL_AGENT permission.
+         This may be empty if ephemeral apps are not supported. -->
+    <string-array name="config_ephemeralResolverPackage" translatable="false">
+        <!-- Google Play Services or microG -->
+        <item>com.google.android.gms</item>
+    </string-array>
+
+    <!-- The set of system packages on device that are queryable by any app regardless of the
+         contents of its manifest. -->
+    <string-array name="config_forceQueryablePackages" translatable="false">
+        <!-- Android Settings -->
+        <item>com.android.settings</item>
+        <item>com.android.providers.settings</item>
+        <!-- Google Play Services or microG -->
+        <item>com.google.android.gms</item>
+        <!-- Google Play Store -->
+        <item>com.android.vending</item>
+    </string-array>
+
+    <!-- A list of potential packages, in priority order, that can supply rules to
+         AppIntegrityManager. These need to be apps on the system partition. -->
+    <string-array name="config_integrityRuleProviderPackages" translatable="false">
+        <!-- Google Play Services or microG -->
+        <item>com.google.android.gms</item>
+        <!-- Google Play Store -->
+        <item>com.android.vending</item>
+    </string-array>
+
+    <!-- Flag indicating which package name can access DeviceConfig table -->
+    <string name="config_deviceConfiguratorPackageName" translatable="false">com.google.android.gms</string>
+
+    <!-- Flag indicating which package name can access the persistent data partition -->
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
